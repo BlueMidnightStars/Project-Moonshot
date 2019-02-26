@@ -20,8 +20,11 @@
 
 export default {
   name: 'enter',
+  methods:{
+
+  },
   components: {
-  	
+
   },
 };
 </script>
@@ -39,14 +42,20 @@ export default {
     box-sizing: border-box;
 }
 
+html,body{
+    height: 100%;
+    width: 100%;
+    
+}
 
 
 .section-background{
     background-color: #000000;
     text-align: center;
-    display: inline-block;
+    display:flex;
+    align-items: center;
     width: 100%;
-    padding: 49px/@ppr 0;
+    height: 100%;
 
     .luna-greet{
         background-color: #fff;
