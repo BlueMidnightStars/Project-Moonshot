@@ -1,0 +1,139 @@
+* {
+  margin: 0 auto;
+  padding: 0;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+.container {
+  width: 10rem;
+  height: 14.76rem;
+  background-color: #f7f7f7;
+  padding-top: 0.4rem;
+}
+.container .todos-section {
+  width: 8.66666667rem;
+}
+.container .todos-section .todos-topbar {
+  width: 100%;
+  height: 1.05333333rem;
+  font-size: 0;
+  position: relative;
+}
+.container .todos-section .todos-topbar .topbar-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 8.66666667rem;
+  height: 1.05333333rem;
+}
+.container .todos-section .todos-topbar .topbar-operation {
+  display: inline-block;
+  width: 33.33%;
+  vertical-align: top;
+  text-align: center;
+  font-size: 0.37333333rem;
+  color: #000000;
+  font-weight: 600;
+  position: absolute;
+  top: 0.44rem;
+}
+.container .todos-section .todos-topbar .topbar-operation.step-2 {
+  left: 2.88rem;
+}
+.container .todos-section .todos-topbar .topbar-operation.step-3 {
+  left: 5.77333333rem;
+}
+.container .todos-section .todos-content {
+  width: 100%;
+  height: 11.06666667rem;
+  background-color: #fff;
+  vertical-align: top;
+  border-radius: 0 0 0.33333333rem 0.33333333rem;
+}
+.container .todos-section .todos-content .todos-today {
+  text-align: center;
+  padding-top: 0.8rem;
+}
+.container .todos-section .todos-content .todos-today .todos-title {
+  font-size: 0.48rem;
+  color: #000000;
+  font-weight: 600;
+}
+.container .todos-section .todos-content .todos-today .todos-list {
+  margin-top: 0.8rem;
+}
+.container .todos-section .todos-content .todos-today .todos-list .todos-item {
+  width: 7.86666667rem;
+  height: 1.46666667rem;
+  border-bottom: 0.01333333rem solid #000000;
+  font-size: 0;
+  position: relative;
+}
+.container .todos-section .todos-content .todos-today .todos-list .todos-item .todo-work {
+  display: inline-block;
+  width: 6.29333333rem;
+  height: 100%;
+}
+.container .todos-section .todos-content .todos-today .todos-list .todos-item .todo-work p {
+  font-size: 0.37333333rem;
+  color: 333333;
+  line-height: 1.46666667rem;
+  text-align: left;
+  font-weight: 600;
+}
+.container .todos-section .todos-content .todos-today .todos-list .todos-item .todos-click {
+  display: inline-block;
+  width: 1.57333333rem;
+  height: 100%;
+  line-height: 1.46666667rem;
+  font-size: 0.37333333rem;
+  color: 333;
+  text-align: center;
+  font-weight: 600;
+}
+.container .todos-section .todos-content .todos-today .todos-list .todos-item:before {
+  content: '';
+  display: inline-block;
+  width: 0.01333333rem;
+  height: 0.72rem;
+  background-color: #333;
+  position: absolute;
+  top: 0.37333333rem;
+  right: 1.57333333rem;
+}
+.container .todos-section .todos-content .todos-happiness {
+  width: 100%;
+  padding-top: 0.50666667rem;
+}
+.container .todos-section .todos-content .todos-happiness .happiness-title {
+  text-align: center;
+  font-size: 0.48rem;
+  color: #000;
+}
+.container .todos-section .todos-content .todos-happiness .happiness-text {
+  width: 7.86666667rem;
+  margin-top: 0.26666667rem;
+  font-size: 0.37333333rem;
+  color: 000;
+  font-weight: 600;
+  line-height: 0.64rem;
+}
+.container .todos-section .todos-confirm {
+  margin-top: 0.4rem;
+  width: 8.66666667rem;
+  height: 1.17333333rem;
+  background-color: #000000;
+  color: #fff;
+  font-size: 0.42666667rem;
+  line-height: 1.17333333rem;
+  font-weight: 600;
+  border-radius: 0.06666667rem;
+  text-align: center;
+}

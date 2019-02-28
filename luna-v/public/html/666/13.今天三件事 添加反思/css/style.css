@@ -1,0 +1,286 @@
+* {
+  margin: 0 auto;
+  padding: 0;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+.container {
+  width: 10rem;
+  background-color: #f7f7f7;
+  padding-top: 0.4rem;
+}
+.container .todos-section {
+  width: 8.66666667rem;
+}
+.container .todos-section .todos-topbar {
+  width: 100%;
+  height: 1.05333333rem;
+  font-size: 0;
+  position: relative;
+}
+.container .todos-section .todos-topbar .topbar-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 8.66666667rem;
+  height: 1.05333333rem;
+}
+.container .todos-section .todos-topbar .topbar-operation {
+  display: inline-block;
+  width: 33.33%;
+  vertical-align: top;
+  text-align: center;
+  font-size: 0.37333333rem;
+  color: #000000;
+  font-weight: 600;
+  position: absolute;
+  top: 0.44rem;
+}
+.container .todos-section .todos-topbar .topbar-operation.step-2 {
+  left: 2.88rem;
+}
+.container .todos-section .todos-topbar .topbar-operation.step-3 {
+  left: 5.77333333rem;
+}
+.container .todos-section .todos-content {
+  width: 100%;
+  background-color: #fff;
+  vertical-align: top;
+  border-radius: 0 0 0.33333333rem 0.33333333rem;
+}
+.container .todos-section .todos-content .todos-today {
+  text-align: center;
+  padding-top: 0.8rem;
+}
+.container .todos-section .todos-content .todos-today .todos-title {
+  font-size: 0.48rem;
+  color: #000000;
+  font-weight: 600;
+}
+.container .todos-section .todos-content .todos-today .todos-list {
+  margin-top: 0.8rem;
+}
+.container .todos-section .todos-content .todos-today .todos-list .todos-item {
+  width: 7.86666667rem;
+  height: 1.46666667rem;
+  border-bottom: 0.01333333rem solid #000000;
+  font-size: 0;
+  position: relative;
+}
+.container .todos-section .todos-content .todos-today .todos-list .todos-item .todo-work {
+  display: inline-block;
+  width: 6.29333333rem;
+  height: 100%;
+}
+.container .todos-section .todos-content .todos-today .todos-list .todos-item .todo-work .todo-work-content {
+  font-size: 0.37333333rem;
+  color: #b3b3b3;
+  line-height: 1.46666667rem;
+  text-align: left;
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.container .todos-section .todos-content .todos-today .todos-list .todos-item .todo-work .todo-work-content:before {
+  content: '';
+  display: inline-block;
+  width: 0.4rem;
+  height: 0.4rem;
+  border-radius: 0.04rem;
+  border: 0.01333333rem solid #cccccc;
+  margin-right: 0.26666667rem;
+  vertical-align: top;
+  margin-top: 0.52rem;
+  cursor: pointer;
+}
+.container .todos-section .todos-content .todos-today .todos-list .todos-item .todos-click {
+  vertical-align: top;
+  display: inline-block;
+  width: 1.57333333rem;
+  height: 100%;
+  line-height: 1.46666667rem;
+  font-size: 0.37333333rem;
+  color: #333;
+  text-align: center;
+  font-weight: 600;
+}
+.container .todos-section .todos-content .todos-today .todos-list .todos-item.active .todo-work-content {
+  color: #333;
+  text-decoration: line-through;
+}
+.container .todos-section .todos-content .todos-today .todos-list .todos-item.active .todo-work-content:before {
+  border: none;
+  background-image: url(../img/frame.png);
+}
+.container .todos-section .todos-content .todos-today .todos-list .todos-item:before {
+  content: '';
+  display: inline-block;
+  width: 0.01333333rem;
+  height: 0.72rem;
+  background-color: #333;
+  position: absolute;
+  top: 0.37333333rem;
+  right: 1.57333333rem;
+}
+.container .todos-section .todos-content .todos-happiness {
+  width: 100%;
+  padding-top: 0.50666667rem;
+  padding-left: 0.66666667rem;
+  padding-bottom: 0.2rem;
+  text-align: center;
+  border-bottom: 0.01333333rem solid #cccccc;
+}
+.container .todos-section .todos-content .todos-happiness .happiness-title {
+  font-size: 0.48rem;
+  color: #000;
+}
+.container .todos-section .todos-content .todos-happiness .happiness-text {
+  width: 7.2rem;
+  margin-top: 0.26666667rem;
+  font-size: 0.37333333rem;
+  color: #b3b3b3;
+  font-weight: 600;
+  line-height: 0.64rem;
+  position: relative;
+  letter-spacing: -0.05333333rem;
+  text-align: left;
+}
+.container .todos-section .todos-content .todos-happiness .happiness-text:before {
+  content: '';
+  display: inline-block;
+  width: 0.4rem;
+  height: 0.4rem;
+  border-radius: 0.04rem;
+  border: 0.01333333rem solid #cccccc;
+  margin-right: 0.26666667rem;
+  cursor: pointer;
+  position: absolute;
+  top: 0.45333333rem;
+  left: -0.66666667rem;
+}
+.container .todos-section .todos-content .todos-introspection {
+  width: 100%;
+  height: 3.24rem;
+  padding: 0.4rem 0.4rem 0 0.4rem;
+  font-size: 0;
+}
+.container .todos-section .todos-content .todos-introspection .introspection-title {
+  font-size: 0.48rem;
+  color: #000000;
+  font-weight: 700;
+}
+.container .todos-section .todos-content .todos-introspection .introspection-title:after {
+  content: '';
+  display: inline-block;
+  width: 0.22666667rem;
+  height: 0.22666667rem;
+  background-image: url(../img/xin.png);
+  vertical-align: top;
+  margin-top: 0.13333333rem;
+  margin-left: 0.09333333rem;
+}
+.container .todos-section .todos-content .todos-introspection .introspection-text {
+  width: 7.86666667rem;
+  height: 2.10666667rem;
+  background-color: #f2f8fc;
+  border: none;
+  font-size: 0.37333333rem;
+  color: #b3b3b3;
+  padding-left: 0.26666667rem;
+  font-weight: 600;
+  vertical-align: top;
+  resize: none;
+  outline: none;
+  margin-top: 0.26666667rem;
+}
+.container .todos-section .todos-content .todos-element {
+  width: 100%;
+  padding: 0.4rem;
+}
+.container .todos-section .todos-content .todos-element .element-title {
+  font-size: 0.48rem;
+  color: #000000;
+  font-weight: 700;
+}
+.container .todos-section .todos-content .todos-element .element-title:after {
+  content: '';
+  display: inline-block;
+  width: 0.22666667rem;
+  height: 0.22666667rem;
+  background-image: url(../img/xin.png);
+  vertical-align: top;
+  margin-top: 0.13333333rem;
+  margin-left: 0.09333333rem;
+}
+.container .todos-section .todos-content .todos-element .element-text {
+  font-size: 0.32rem;
+  color: #b3b3b3;
+  margin-top: 0.05333333rem;
+}
+.container .todos-section .todos-content .todos-element .element-list {
+  margin-top: 0.26666667rem;
+}
+.container .todos-section .todos-content .todos-element .element-list .element-item {
+  width: 7.86666667rem;
+  height: 1rem;
+  border: 0.01333333rem solid #000000;
+  border-radius: 0.05333333rem;
+  text-align: center;
+  position: relative;
+  margin-bottom: 0.13333333rem;
+}
+.container .todos-section .todos-content .todos-element .element-list .element-item .element-item-text {
+  font-size: 0.32rem;
+  color: #333;
+  font-weight: 600;
+  line-height: 0.38666667rem;
+  padding-top: 0.06666667rem;
+}
+.container .todos-section .todos-content .todos-element .element-list .element-item:before {
+  content: '';
+  display: inline-block;
+  width: 0.21333333rem;
+  height: 0.44rem;
+  background-image: url(../img/icon_move.png);
+  position: absolute;
+  top: 0.26666667rem;
+  left: 0.26666667rem;
+}
+.container .todos-section .todos-confirm {
+  margin-top: 0.4rem;
+  width: 8.66666667rem;
+  height: 1.17333333rem;
+  background-color: #000000;
+  color: #fff;
+  font-size: 0.42666667rem;
+  line-height: 1.17333333rem;
+  font-weight: 600;
+  border-radius: 0.06666667rem;
+  text-align: center;
+}
+.container .todos-section .todos-confirm-hint {
+  text-align: center;
+  font-size: 0;
+  margin-top: 0.4rem;
+  padding-bottom: 0.4rem;
+}
+.container .todos-section .todos-confirm-hint img {
+  display: inline-block;
+  margin-right: 0.13333333rem;
+  vertical-align: top;
+}
+.container .todos-section .todos-confirm-hint p {
+  display: inline-block;
+  font-size: 0.32rem;
+  font-weight: 600;
+  color: #ff1d25;
+  vertical-align: top;
+}
