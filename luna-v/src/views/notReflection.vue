@@ -45,6 +45,28 @@ export default {
 		let dom = [];
 		let todos_id = this.$route.query.id;
 		console.log(todos_id);
+		let li = 'http://localhost:3000/api/todos';
+		axios.get(li,{
+			params:{"token":token}
+			}).then(res => {
+				console.log(res);
+				if (res.data.code == 200) {
+					let finallyO = res.data.data.length - 1;
+					console.log(finallyO);
+					console.log(123);
+					console.log(res.data.data[finallyO].reflect);
+					if (res.data.data[finallyO].reflect != null) {
+						this.$router.push({name: 'complete',query:{}});
+					}
+					}else if(res.data.code == 0){
+					}
+			}).catch( err => {
+		})
+
+
+
+
+
 		let URL = 'http://localhost:3000/api/todos/' + todos_id;
 		console.log(token);
 		axios.get(URL,{

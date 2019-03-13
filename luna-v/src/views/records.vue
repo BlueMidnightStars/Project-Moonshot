@@ -25,7 +25,6 @@
         </div>
         <div class="container_second">
           <h1>今日小确幸</h1>
-          <span></span>
           <p>{{item.surprise}}</p>
         </div>
         <div class="container_third">

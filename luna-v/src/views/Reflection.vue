@@ -380,20 +380,6 @@ html,body{
 					position:relative;
 					text-align: left;
 				}
-				.happiness-text:before{
-					content: '';
-					display: inline-block;
-					width: 30px/@ppr;
-					height: 30px/@ppr;
-					border-radius:3px/@ppr;
-					border:1px/@ppr solid #cccccc;
-					margin-right: 20px/@ppr;					
-					cursor: pointer;
-					position: absolute;
-					top:34px/@ppr;
-					left: -50px/@ppr;
-
-				}
 			}
 			.todos-introspection{
 				width: 100%;

@@ -72,8 +72,11 @@ export default {
         this.time = res.data.data.deadline;
         let future = new Date(res.data.data.deadline);
         let nowadays = (new Date()).getTime();
+        console.log(future, res.data.data.deadline)
         let total = (future - nowadays)/1000;
+        console.log(total);
         let day = parseInt(total / (24*60*60));
+        console.log(day);
         let enact = new Date(future).toLocaleString().replace(/:\d{1,2}$/,' ');
         this.enact = enact;
         if (day < 0) {

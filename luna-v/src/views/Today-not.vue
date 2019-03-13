@@ -51,7 +51,7 @@
 								<p class="shade-Chinese">{{item.objective}}</p>	
 							</div>
 							<div>
-								<div class="shade-content-text" v-for='(data,index) in item.keyresults' :key='data.id' @click='highlight(data.id, data.keyresult, $event)' >
+								<div class="shade-content-text" :class="[has(data.id)? 'gray' : '']" v-for='(data,index) in item.keyresults' :key='data.id' @click='highlight(data.id, data.keyresult, $event)' >
 									<p class="shade-text-chinese">{{data.keyresult}}</p>
 								</div>
 							</div>
@@ -109,9 +109,15 @@ export default {
 				console.log(res);
 				if (res.data.code == 200) {
 					let finallyO = res.data.data.length - 1;
-					console.log(finallyO);
+					console.log(res.data.data[finallyO]);
 					let time = res.data.data[finallyO].created_at;
-
+					let future = new Date(new Date(time).toLocaleDateString()).getTime();
+					let sudo = new Date(new Date().toLocaleDateString()).getTime();
+					if(future >= sudo){
+						console.log(123);
+						this.$router.push({name: 'notReflection',query:{id:res.data.data[finallyO].id}});
+					}
+					console.log(t,future);
 					}else if(res.data.code == 0){
 					}
 			}).catch( err => {
@@ -220,6 +226,7 @@ export default {
 				this.OKRThree = [];
 				this.writingThree = [];
 			}
+			console.log(this.writingOne, this.writingTwo, this.writingThree)
 		},
 		hide:function(){
 			this.show = false;
@@ -251,9 +258,21 @@ export default {
 			}).catch( err => {
 			})
 		},
+		has:function(id){
+			let judge = false;
+			if (this.today == 1){
+				judge = this.OKROne.some((item, index) => item == id)
+			}else if (this.today == 2){
+				judge = this.OKRTwo.some((item, index) => item == id)
+			}else if (this.today == 3){
+				judge = this.OKRThree.some((item, index) => item == id)
+			}
+			return judge;
+		}
 	},
 	watch:{
 		today:function(){
+			
 			if (this.today == 1) {
 				this.temporary = this.writingOne
 			}else if (this.today == 2) {
@@ -518,7 +537,7 @@ html,body{
 						.shade-content-text{
 							position:relative;
 							width: 690px/@ppr;
-							// height: 74px/@ppr;
+							height: 74px/@ppr;
 							border:1px/@ppr solid #cccccc;
 							border-radius:7px/@ppr;				
 							padding-top: 20px/@ppr;
@@ -530,6 +549,8 @@ html,body{
 								white-space: nowrap;
 								overflow: hidden;
 								text-overflow: ellipsis;
+								height: 74px/@ppr;
+
 							}
 							.shade-text-english{
 								display: none;
